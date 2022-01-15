@@ -26,16 +26,16 @@ nav {
   height: 80px;
   align-items: center;
 }
-.influencer-navigation {
+.navigation {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   font-size: 18px;
 }
-.influencer-navigation li {
+.navigation li {
   list-style: none;
   margin: 10px;
 }
-.influencer-navigation li a {
+.navigation li a {
   text-decoration: none;
   font-size: 16px;
   color: #3a3a3a;
@@ -72,26 +72,22 @@ nav {
   top: 5px;
   box-shadow: 0 2px 0 #a12268;
 }
-.primary-button2 {
+.primary-button-two {
   outline: 0;
   border: 0;
   align-items: flex-start;
   padding: 10px 24px;
-  background: #e02c6d;
+  background: #e70d5d;
   font-size: 16px;
   cursor: pointer;
   position: relative;
   color: #fff;
 }
-.primary-button2:active {
+.primary-button-two:active {
   top: 10px;
-  box-shadow: 0 2px 0 rgba(141, 3, 3, 0.87);
+  box-shadow: 0 2px 0 gray;
 }
-/* 
--------------------------------
-  Influence banner Part Style
-------------------------------
-   */
+
 .influencer-banner {
   height: calc(100vh - 80px);
   display: grid;
@@ -123,7 +119,7 @@ nav {
 }
 /*
  ---------------------
-  Collection Part Style
+  Collection  Style
  -------------------------
    */
 .popular-collections {
@@ -134,17 +130,17 @@ nav {
 }
 .popular-collection {
   background: #ffffff;
-  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 40px gray;
   border-radius: 5px;
   align-items: center;
 }
-.collection-name {
+.collection-items {
   font-size: 28px;
   margin: 0 20px;
   text-align: left;
   align-items: center;
 }
-.collection-price {
+.item-price {
   margin: 0 20px;
   font-size: 24px;
   text-align: left;
@@ -243,16 +239,13 @@ footer p {
   text-align: center;
   background-color: #0a0826;
 }
-.socialsite-logo {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-column-gap: 24px;
-  grid-row-gap: 30px;
-  margin-left: 550px;
+.footer-logo {
+  display: flex;
+   flex-direction: row;
+   font-size: large;
+  margin-left: 50px;
+  justify-content: center;
   text-align: center;
-  background-repeat: no-repeat;
-  height: 70px;
-  width: 350px;
   align-items: center;
   background-color: #0a0826;
 }
@@ -268,14 +261,8 @@ footer p {
 /* ---------------
 Responsive CSS
 ----------------*/
-/* ---------------
- Media Queries 
--------------------*/
-/* ---------------
-Mobile Devices 
------------------*/
 
-@media (max-width: 668px) {
+@media (max-width: 680px) {
   .influencer-banner {
     grid-template-columns: 1fr;
     height: fit-content;
@@ -294,49 +281,26 @@ Mobile Devices
   .nav-toggler-icon {
     display: block;
   }
-  .influencer-navigation {
+  .navigation {
     position: fixed;
     top: 80px;
     left: 0;
-
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     flex-direction: flex;
     text-align: center;
     text-align: center;
     flex-wrap: wrap;
-    background-color: gray;
+    background-color: white;
     padding: 20px 0;
     transform: translateY(-330px);
     transition: 0.5s ease-in-out;
   }
 
-  .influencer-navigation li a {
+  .navigation li a {
     color: gray;
   }
-  #nav-toggle:checked ~ .influencer-navigation {
+  #nav-toggle:checked ~ .navigation {
     transform: translateY(0px);
-  }
-  .socialsite-logo {
-    position: fixed;
-  }
-  .socialsite-logo {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-/*------------ 
-Tablet CSS 
---------------*/
-
-@media (max-width: 950px) {
-  .influencer-products {
-    grid-template-columns: 1fr 1fr;
-  }
-  .banner-left h1 {
-    font-size: 35px;
-  }
-  .influencer-navigation {
-    position: fixed;
   }
 }
